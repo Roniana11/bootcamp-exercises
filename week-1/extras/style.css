@@ -1,0 +1,13 @@
+section{
+    background-color: rgb(233, 173, 183);
+    width: calc(100% / 3);
+    height: 30px;
+    border: 1px solid black;
+}
+
+#container{
+    width:40%;
+    height:50px;
+    display: flex;
+}
+

@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+#chat-container {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 9fr 1fr;
+  grid-template-areas: "f m" "f i";
+}
+
+#friends-container {
+  background-color:rgb(135, 62, 172);
+  grid-template-rows: 1fr 4fr;
+  display: grid;
+  grid-area: f;
+}
+
+#friends-header {
+  padding: 5px;
+}
+
+#friends-list {
+  display: grid;
+  grid-gap: 10px;
+  padding: 5px;
+}
+
+.friend {
+  background-color: rgba(255, 255, 255, 0.224);
+  height: 20px;
+  padding-left: 5px;
+  font-size: 10px;
+}
+
+#message-container {
+  grid-area: m;
+  background-color: lightgrey;
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  padding: 20px;
+}
+
+.message {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  width: 100px;
+  height: 30px;
+  font-size: 10px;
+  align-items: center;
+  padding: 0px 10px;
+  border-radius: 3px;
+  font-family: 'Shadows Into Light', cursive;
+}
+
+.message-my {
+  background-color: greenyellow;
+}
+
+.message-friend {
+  background-color: grey;
+}
+.friend-message {
+  display: grid;
+}
+
+.my-message {
+  display: grid;
+  justify-content: end;
+}
+
+.message label {
+  font-size: 7px;
+}
+
+#input-container {
+  grid-area: i;
+  display: grid;
+  width: 100%;
+  grid-template-columns: 4fr 1fr;
+}
+
+#input-container input {
+  font-size: 7px;
+}
+
+#send-btn {
+  background-color:rgb(135, 62, 172);
+  text-align: center;
+}
+
+#send-btn h3 {
+  font-size: 10px;
+  color: white;
+}
+
+p {
+  margin: 0px;
+}
