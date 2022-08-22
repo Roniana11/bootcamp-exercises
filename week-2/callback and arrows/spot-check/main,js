@@ -1,0 +1,37 @@
+let users = [];
+
+const getData = function (displayData) {
+  setTimeout(function () {
+    users = [{ name: "Rick" }, { name: "Morty" }];
+    console.log("Got users");
+    displayData();
+  }, 3000);
+};
+
+const displayData = function () {
+  console.log("Going to display: " + users);
+  for (user of users) {
+    console.log(user.name);
+  }
+};
+
+getData(displayData);
+
+//// spot check 3
+
+setInterval(function () {
+  console.log(new Date());
+}, 1000);
+
+// spot check 4
+
+const square = (num) => {
+  console.log(num * num);
+};
+
+// spot check 5
+
+const getFormalTitle = (title, name) => `${title} ${name}`;
+
+formalTitle = getFormalTitle("Madamme", "Lellouche")
+console.log(formalTitle) //returns "Maddame Lellouche"
