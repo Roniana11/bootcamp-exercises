@@ -1,0 +1,9 @@
+.login button {
+  background-color: white;
+  border-radius: 10px;
+  border-style: none;
+}
+#container {
+  background-color: red;
+  width: 50%;
+}
