@@ -1,12 +1,65 @@
+button{
+    background-color: white;
+    border-style: none;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 4px 25px;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 10px;
+    align-items: center;
+    width:250px;
+    
+}
+
+.input{
+    border-radius: 2px;
+    border: 1px solid transparent;
+    margin: 10px 0;
+    outline: none;
+    padding:5px;
+    color: black;
+}
+
+.input:focus{
+    border: 1px rgba(0, 157, 255, 0.977) solid;
+}
+
+p{
+    color: white;
+}
 .login{
     button {
-        background-color: white;
+        &:extend(button);
         border-radius: 10px;
-        border-style: none;
     }
 }
 
-#container{
-    background-color: red;
+#main-container{
     width:50%;
+}
+
+#join-container{
+    background-color: rgb(155, 28, 28);
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    button {
+        &:extend(button);
+        border-radius: 2px;
+    }
+}
+
+#form-container{
+    background-color: rgb(180, 32, 32);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.form{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
 }

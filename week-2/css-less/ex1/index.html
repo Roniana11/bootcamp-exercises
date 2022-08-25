@@ -1,31 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Document</title>
-</head>
-<body>
-  <div id="container">
-  <form >
-    <div >
-      <div >
-        <input id="email" type="email" >
-      
-      </div>
-    </div>
-    <div >
-      <div >
-        <input id="password" type="password" >
+  </head>
+  <body>
+    <div id="main-container" class="container">
+      <div id="form-container" class="container">
+        <p>Log to your account</p>
+        <form class="form">
+          <input id="email" type="email" placeholder="email" class="input" />
+          <input
+            id="password"
+            type="password"
+            placeholder="Password"
+            class="input"
+          />
 
+          <div class="login">
+            <button>Login</button>
+          </div>
+        </form>
+      </div>
+      <div id="join-container" class="container">
+        <button>Open an account</button>
+        <p>Join Bank hapoalim online</p>
       </div>
     </div>
-      <div class="login">
-           <button>Login</button>
-      </div>
-    </form>
-  </div>
-</body>
+  </body>
 </html>

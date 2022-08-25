@@ -8,10 +8,12 @@ const playgroundWidth =
 const playgroundHeight =
   document.getElementById("playing-field").clientHeight - ball.clientHeight;
 
-let left_offset = 0;
-let top_offset = 0;
-let right_offset = playgroundHeight;
-let bottom_offset = playgroundHeight;
+const directions = {
+  left: 0,
+  top: 0,
+  right: playgroundHeight,
+  bottom: playgroundHeight,
+};
 
 const makeMove = (event) => {
   event.preventDefault();
@@ -35,38 +37,29 @@ const makeMove = (event) => {
 };
 
 const moveRight = function () {
-  right_offset = right_offset - 10 < 0 ? 0 : right_offset - 10;
-  left_offset =
-    left_offset + 10 >= playgroundWidth ? playgroundWidth : left_offset + 10;
-  ball.style.right = `${right_offset}px`;
-  ball.style.left = `${left_offset}px`;
+  moveBall('right','left',playgroundWidth);
 };
 
 const moveLeft = function () {
-  left_offset = left_offset - 10 < 0 ? 0 : left_offset - 10;
-  right_offset =
-    right_offset + 10 >= playgroundWidth ? playgroundWidth : right_offset + 10;
-  ball.style.left = `${left_offset}px`;
-  ball.style.right = `${right_offset}px`;
+  moveBall('left','right',playgroundWidth);
 };
 
 const moveUp = function () {
-  top_offset = top_offset - 10 < 0 ? 0 : top_offset - 10;
-  bottom_offset =
-    bottom_offset + 10 >= playgroundHeight
-      ? playgroundHeight
-      : bottom_offset + 10;
-  ball.style.bottom = `${bottom_offset}px`;
-  ball.style.top = `${top_offset}px`;
+  moveBall('top','bottom',playgroundHeight);
 };
 
 const moveDown = function () {
+  moveBall('bottom','top',playgroundHeight);
+};
 
-  bottom_offset = bottom_offset - 10 < 0 ? 0 : bottom_offset - 10;
-  top_offset =
-    top_offset + 10 >= playgroundHeight ? playgroundHeight : top_offset + 10;
-  ball.style.top = `${top_offset}px`;
-  ball.style.bottom = `${bottom_offset}px`;
+const moveBall = function (direction, oppDir, max) {
+  const currentDirection = directions[direction];
+  const currentOppDirection = directions[oppDir];
+
+  directions[direction] = currentDirection - 10 < 0 ? 0 : currentDirection - 10;
+  directions[oppDir] = currentOppDirection + 10 >= max ? max : currentOppDirection + 10;
+  ball.style[direction] = `${directions[direction]}px`;
+  ball.style[oppDir] = `${directions[oppDir]}px`;
 };
 
 rightArrow.addEventListener("click", moveRight);

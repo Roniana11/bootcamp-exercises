@@ -1,9 +1,54 @@
-.login button {
+button,
+.login button,
+#join-container button {
   background-color: white;
-  border-radius: 10px;
   border-style: none;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 4px 25px;
 }
-#container {
-  background-color: red;
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 10px;
+  align-items: center;
+  width: 250px;
+}
+.input {
+  border-radius: 2px;
+  border: 1px solid transparent;
+  margin: 10px 0;
+  outline: none;
+  padding: 5px;
+  color: black;
+}
+.input:focus {
+  border: 1px rgba(0, 157, 255, 0.977) solid;
+}
+p {
+  color: white;
+}
+.login button {
+  border-radius: 10px;
+}
+#main-container {
   width: 50%;
+}
+#join-container {
+  background-color: #9b1c1c;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+#join-container button {
+  border-radius: 2px;
+}
+#form-container {
+  background-color: #b42020;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+.form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
