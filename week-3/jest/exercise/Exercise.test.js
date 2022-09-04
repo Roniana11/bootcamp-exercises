@@ -73,7 +73,6 @@ test("should return false",()=>{
 
 test("should add to stuff x and y",()=>{
     const exercises = new Exercises();
-    
     const spy = jest.spyOn(Array.prototype, 'push');
     exercises.add(1,2);
 
