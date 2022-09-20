@@ -19,7 +19,7 @@ def buyItem():
 
 def giveDiscount():
     try:
-        response =requests.get(f"http://127.0.0.1:8000/sale?admin=true").json()
+        response = requests.get(f"http://127.0.0.1:8000/sale?").json()
         print("We applied the discount")
         return response
     except:

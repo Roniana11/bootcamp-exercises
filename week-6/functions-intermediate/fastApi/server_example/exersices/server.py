@@ -6,6 +6,9 @@ import uvicorn
 from store import store
 
 OUT_OF_STOCK = 0
+INVENTORY_MAX =10
+DISCOUNT = 2
+
 
 app = FastAPI()
 app.mount("/images", StaticFiles(directory="."), name="images")
@@ -17,11 +20,11 @@ def sanity():
    return {"meassage":"Server is up and running smoothly"}
 
 @app.get('/sale')
-def sale(admin):
+def sale(admin=False):
     if admin == "true":
         for item in store:
-            if item["inventory"] > 10:
-                item["price"] /=2
+            if item["inventory"] > INVENTORY_MAX:
+                item["price"] /= DISCOUNT
 
     return store
     
